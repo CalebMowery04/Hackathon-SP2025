@@ -46,3 +46,4 @@ function openSideBar() {
 async function rateOutOfTen() {
   
 }
+addSubmitListener();
