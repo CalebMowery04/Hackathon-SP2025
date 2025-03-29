@@ -1,15 +1,14 @@
 async function addSubmitListener() {
-    var prompt = document.getElementById("prompt").value;
-    document.getElementById("output").innerText = prompt
     document.getElementById("submit").addEventListener("click", async function(event) {
-    document.getElementById("output").innerText = "thinking...";
-    try {
-      text = await testing();
-      document.getElementById("output").innerText = text
-    }
-    catch (error) {
-      document.getElementById("output").innerText = error;
-    }
+        var prompt = document.getElementById("prompt").value;
+        document.getElementById("output").innerText = "thinking...";
+        try {
+          text = await testing();
+          document.getElementById("output").innerText = text
+        }
+        catch (error) {
+          document.getElementById("output").innerText = error;
+        }
     });
 }
       // document.getElementById("prompt").addEventListener("keydown", function(event) {
