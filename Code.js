@@ -1,11 +1,9 @@
 const html = HtmlService.createHtmlOutputFromFile('SideBar.html')
 async function testing() {
-    var doc = DocumentApp.getActiveDocument();
-    var body = doc.getBody();
     const prompt = 'The most important aspects of a persuasive presentation are:';
     
     text = await promptAI(prompt);
-    body.appendParagraph(text);
+    return text;
 }
 
 async function promptAI(prompt) {
