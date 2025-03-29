@@ -13,6 +13,7 @@
         <button type="button" id="submit">submit</button>
                   <p id="output"></p>
         <script>
+          var prompt = document.getElementById("prompt").value;
           document.getElementById("submit").addEventListener("click", async function(event) {
             document.getElementById("output").innerText = "thinking...";
             try {
