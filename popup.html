@@ -17,8 +17,9 @@
           document.getElementById("submit").addEventListener("click", async function(event) {
             document.getElementById("output").innerText = "thinking...";
             try {
-              text = await promptAI(prompt);
-              document.getElementById("output").innerText = text}
+              text = await testing();
+              document.getElementById("output").innerText = text
+            }
             catch (error) {
               document.getElementById("output").innerText = error;
             }
