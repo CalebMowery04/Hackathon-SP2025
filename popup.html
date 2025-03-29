@@ -5,6 +5,33 @@
   </head>
   <body>
     <h1>Hello Hackathon</h1>
+      <script src="Code.gs" async></script>
+      <h1>Prompt-AI</h1>
+      <p>
+        <label for="Prompt: "></label>
+        <input type="text" id="prompt" placeholder="Prompt Gemini!">
+        <button type="button" id="submit">submit</button>
+                  <p id="output"></p>
+        <script>
+          document.getElementById("submit").addEventListener("click", async function(event) {
+            document.getElementById("output").innerText = "thinking...";
+            try {
+              text = await promptAI(prompt);
+              document.getElementById("output").innerText = text}
+            catch (error) {
+              document.getElementById("output").innerText = error;
+            }
+          });
+        </script>
+        <!-- <script>
+          document.getElementById("prompt").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+              document.getElementById("output").innerText = promptAI("HELLO");
+            }
+          });
+        </script> -->
+      </p>
+
 
     <div class="card">
 
