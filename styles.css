@@ -1,0 +1,20 @@
+
+
+#chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: none;
+}
