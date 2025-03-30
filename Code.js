@@ -1,5 +1,6 @@
 async function addSubmitListener() {
-    document.getElementById("submit").addEventListener("click", async function(event) {
+    document.getElementById("submit").onclick = async function() {
+        alert("clocked");
         var prompt = document.getElementById("prompt").value;
         document.getElementById("output").innerText = "thinking...";
         try {
@@ -9,7 +10,7 @@ async function addSubmitListener() {
         catch (error) {
           document.getElementById("output").innerText = error;
         }
-    });
+    };
 }
       // document.getElementById("prompt").addEventListener("keydown", function(event) {
       //   if (event.key === "Enter") {
